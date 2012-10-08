@@ -3,11 +3,12 @@ package peoplerock
 class Skill {
     
     String name
-    String details
+    String description
     
     static constraints = {
-        name(nullable:false,blank:false)
-        details(nullable:true,blank:true)
+        name(nullable:false,blank:false)        
+        description(nullable:true,blank:true)
+        
     }
     
     String toString(){

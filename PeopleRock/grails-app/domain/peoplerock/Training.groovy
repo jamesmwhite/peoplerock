@@ -15,6 +15,6 @@ class Training {
     }
     
     String toString(){
-        return "${courseName}"
+        return "${courseName} - ${startDate}"
     }
 }

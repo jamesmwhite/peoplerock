@@ -2,16 +2,25 @@ package peoplerock
 
 class Employee {
     
-    Person person
-    Role role
+    String firstName
+    String lastName
+    String costCentre
+    Date hireDate
+    Employee employeeLeader
+    String employmentStatus
     
 
     static constraints = {
-        person(nullable:false,blank:false)
-        role(nullable:false,blank:false)
+        firstName(nullable:false,blank:false)
+        lastName(nullable:false,blank:false)
+        costCentre(nullable:false,blank:true)
+        hireDate(nullable:false,blank:false)
+        employeeLeader(nullable:true,blank:true)
+        employmentStatus(inList:["Full","Probation","Contract","Left Company"])
+        employmentStatus(nullable:false,blank:false)
     }
     
     String toString(){
-        return "${person.firstName},${person.lastName},${role.type}"
+        return "${firstName} ${lastName}"
     }
 }
